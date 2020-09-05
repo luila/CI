@@ -1,1 +1,1 @@
-# CI-UFG
+# Central de Intérpretes - UFG
