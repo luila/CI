@@ -48,8 +48,17 @@ class Main extends CI_Controller
 	} 
     // quando a submissão é true chama essa função
 	public function submitNewInterpreter()
-	{		
-		//$this->form_validation->set_rules('name', 'name', 'required', array('required' => 'O Nome é obrigatório'));
+	{	
+		// Validações
+		$this->form_validation->set_rules('name', 'name', 'required|min_length[3]|max_length[15]',
+			array('required'      => 'You have not provided %s.'));
+		$this->form_validation->set_rules('password', 'Password', 'required', 
+			array('required' => 'A senha é obrigatória'));
+		$this->form_validation->set_rules('email', 'Email', 'required|is_unique[user.email]', 
+			array(
+					'required'      => 'You have not provided %s.',
+					'is_unique'     => 'Esse %s já está cadastrado.'
+			));
 	    
 		if ($this->form_validation->run() == FALSE)
 		{

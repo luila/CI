@@ -53,7 +53,7 @@
     var urlVideoEmail='<?php echo $lang['video-informe-email'];?>';
     var urlVideoSenha='<?php echo $lang['video-informe-senha'];?>';
 
-// chama esse vento chando clica em cadastrar(antes do envio para o controller)
+// chama esse evento quando clica em cadastrar(antes do envio para o controller)
     $('#interpreterForm').submit(function() { 
         // valida se o nome é string vazio  
         // essa validação pode melhorar, numero maximo de caracteres por exemplo.

@@ -1,7 +1,7 @@
 <?php
 if(!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Login extends CI_Controller{
+class Login extends CI_Controller{	
 
 	 public function __construct(){
 	  parent::__construct();
@@ -29,9 +29,6 @@ class Login extends CI_Controller{
 				redirect('Main/events?lang=' .  $this->Language_model->getLanguage());
 			}
 			else{ // exibe erro
-				// // Invalid login!
-				// $this->load->helper('url');
-				// $this->load->view('login');
 				echo"
 					<script language='javascript' type='text/javascript'>
 						alert('Login e/ou senha incorretos');
@@ -39,19 +36,9 @@ class Login extends CI_Controller{
 					</script>";
 			}
 		}
-		// recarrega a 
-		    // esse helper deve ser do codeigniter pesquisar depois.
+		// recarrega a pagina (esse helper deve ser do codeigniter pesquisar depois)
 			$this->load->helper('url');
 			$this->load->view('login');
-		// else{
-		// 	$this->load->helper('url');
-		// 	$this->load->view('login');
-		// 	echo"
-		// 			<script language='javascript' type='text/javascript'>
-		// 				alert('Login e/ou senha em branco, favor preencher');
-		// 				window.location.href='';
-		// 			</script>";
-		// }
-	}   
+	}
 }
 ?>
