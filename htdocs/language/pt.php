@@ -13,8 +13,12 @@
             "pt" => "Português",
             "en" => "Inglês",
 
+            // Luíla
+            //"questionnaire" => "Questionário",
+            "questionnaire" => "Questionário Sociodemográfico",
+
             //"events" => "Eventos",
-            "events" => "Agenda de solicitações",
+            "events" => "Agenda de Solicitações",
 
             "about" => "Sobre",
             "config" => "Configurações",
@@ -66,8 +70,19 @@
             "video-username" => "/assets/video/1.mp4",
             "video-password" => "/assets/video/2.mp4",
             "video-solicitar-interprete" => "/assets/video/3.mp4",
-            "video-cadastrar-botao-interprete" => "/assets/video/4.mp4",
-            "video-cadastrar-interprete" => "/assets/video/5.mp4",
+            
+            //"video-cadastrar-botao-interprete" => "/assets/video/4.mp4",
+            "video-cadastrar-botao-interprete" => "/assets/video/1_video.mp4",
+
+            //"video-cadastrar-interprete" => "/assets/video/5.mp4",
+            "video-cadastrar-interprete" => "/assets/video/2_video.mp4",
+
+            //adicionado por Luíla
+            "video-relatorio-solicitacao-interprete" => "/assets/video/3_video.mp4",
+
+            //adicionado por Luíla
+            "video-relatorio-lista-interprete" => "/assets/video/4_video.mp4",
+
             "video-informe-nome" => "/assets/video/6.mp4",
             "video-informe-email" => "/assets/video/7.mp4",
             "video-informe-senha" => "/assets/video/8.mp4",
