@@ -87,6 +87,20 @@ class Main extends CI_Controller
 		}
 	}
 
+	// inserido por Luíla
+	/*public function submitAge()
+	{
+		if ($this->form_validation->run() == FALSE)
+		{
+			$this->event();
+		}
+		else
+		{
+			$this->Event_model->InsertEvent();
+			redirect('Main/navigation?lang=' .  $this->Language_model->getLanguage());
+		}
+	}*/
+
 	public function interpreter_validation($interpreterArray)
 	{
 		foreach ($interpreterArray as $element)
@@ -136,6 +150,14 @@ class Main extends CI_Controller
 		$data['result'] = $this->User_model->getInterpreters();
 		$this->load->view('header');
 		$this->load->view('slislist', $data);
+		$this->load->view('footer');
+	}
+
+	// Luíla
+	public function questionnaire()
+	{
+		$this->load->view('header');
+		$this->load->view('sociodemographic');
 		$this->load->view('footer');
 	}
 

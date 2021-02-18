@@ -26,7 +26,7 @@
             "logout" => "Sair",
 
             //"newEvent" => "Novo Evento",
-            "newEvent" => "Nova solicitação de intéprete para evento",     
+            "newEvent" => "Nova solicitação de intéprete para evento",  
 
             "title" => "Título",
             "date" => "Data",
@@ -37,6 +37,8 @@
             "confirm" => "Confirmar",
             "cancel" => "Cancelar",
             "back" => "Voltar",
+
+            "age" => "Idade",
 
             //"register" => "Cadastrar Eventos e Usuários",
             "register" => "Cadastrar Eventos e Usuários",
@@ -57,6 +59,23 @@
 
             "registerEvent" => "Solicitar intérprete para evento",
             "registerEventLabel" => "Clique no botão abaixo para solicitar intérprete para evento.",
+            "registerAge" => "Informe a sua idade.",
+            "registerName" => "Digite abaixo o seu nome.",
+            "registerCity" => "Digite abaixo a cidade onde você mora.",
+            "registerSex" => "Clique abaixo e selecione o seu sexo.",
+            "registerWork" => "Você trabalha?",
+            "registerRent" => "Qual seu salário mensal?",
+            "registerMarriage" => "Você é casado(a)?",
+            "registerChildren" => "Você tem filhos?",
+            "registerScholarity" => "Quantos anos de estudo você tem?",
+            "registerDeafness" => "Como você se identifica?",
+            "registerParents" => "Seus pais ou responsáveis são sinalizantes da Libras?",
+            "registerParentsDeafness" => "Seus pais ou responsáveis são surdos?",
+
+
+
+
+            "saveAge" => "Salvar",
 
             //"newInterpreter" => "Novo Intérprete",
             "newInterpreter" => "Novo Usuário",
