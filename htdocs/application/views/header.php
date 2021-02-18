@@ -55,12 +55,21 @@
       </div>
    </li>
    
+   
+   <!-- Luíla -->
+   <li>
+      <a  href="<?php echo site_url('Main/questionnaire?lang=' . $_SESSION['lang'])?>" class="collapsible-header waves-effect waves-light">
+         <i class="material-icons">ballot</i><?php echo $lang['questionnaire'];?>
+      </a>
+   </li> 
+   <!------------------>
+     
    <li>
       <a  href="<?php echo site_url('Main/Navigation?lang=' . $_SESSION['lang'])?>" class="collapsible-header waves-effect waves-light">
          <i class="material-icons">navigation</i><?php echo $lang['register'];?>
       </a>
-   </li>
-    
+   </li> 
+
    <li>
       <a  href="<?php echo site_url('Main/report?lang=' . $_SESSION['lang'])?>" class="collapsible-header waves-effect waves-light">
          <i class="material-icons">assessment</i><?php echo $lang['report'];?>
