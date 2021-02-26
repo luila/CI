@@ -76,30 +76,23 @@ class Main extends CI_Controller
 
 	public function submitEvent()
 	{
+		
+		/*
+		código bugado: validation->run está avaliando para false
 		if ($this->form_validation->run() == FALSE)
 		{
+			
 			$this->event();
 		}
 		else
 		{
+			
 			$this->Event_model->InsertEvent();
 			redirect('Main/navigation?lang=' .  $this->Language_model->getLanguage());
-		}
+		}*/
+		$this->Event_model->InsertEvent();
+			redirect('Main/navigation?lang=' .  $this->Language_model->getLanguage());
 	}
-
-	// inserido por Luíla
-	/*public function submitAge()
-	{
-		if ($this->form_validation->run() == FALSE)
-		{
-			$this->event();
-		}
-		else
-		{
-			$this->Event_model->InsertEvent();
-			redirect('Main/navigation?lang=' .  $this->Language_model->getLanguage());
-		}
-	}*/
 
 	public function interpreter_validation($interpreterArray)
 	{
