@@ -6,44 +6,51 @@
         <div class="container modal-content">                 
             <div class="col s12 m12 l6">
                 <div class="card-panel">
+
                     <h4 class="header2 center"><?php echo $lang['newInterpreter'];?></h4>
+
                     <div class='center'>
                         <iframe src=<?php echo $lang['video-cadastrar-interprete'];?> frameborder="0" allowfullscreen></iframe> 
                     </div>
+
                     <blockquote><?php echo $lang['registerNewSLIS'];?></blockquote>
+
                     <div class="row">    
-                            <?php echo validation_errors('<div class="card-panel red lighten-5">','</div>'); ?>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <i class="mdi-action-account-circle prefix"></i>            
-                                    <input id="name" name="name" type="text" class="validate" data-length="80" maxlength="80">
-                                    <label for="name"><?php echo $lang['name'];?></label>
-                                </div>
+                        <?php echo validation_errors('<div class="card-panel red lighten-5">','</div>'); ?>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="mdi-action-account-circle prefix"></i>            
+                                <input id="name" name="name" type="text" class="validate" data-length="80" maxlength="80">
+                                <label for="name"><?php echo $lang['name'];?></label>
                             </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <i class="mdi-communication-email prefix"></i>
-                                    <input id="email" name="email" type="email" class="validate" data-length="150" maxlength="150">
-                                    <label for="email"><?php echo $lang['email'];?></label>
-                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="mdi-communication-email prefix"></i>
+                                <input id="email" name="email" type="email" class="validate" data-length="150" maxlength="150">
+                                <label for="email"><?php echo $lang['email'];?></label>
                             </div>
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <i class="mdi-action-lock-outline prefix"></i>
-                                    <input id='password' class='validate' type='password' name='password' id='password' />
-                                    <label for='password'><?php echo $lang['loginPasswordInput'];?></label>
-                                </div>
-                          </div>
-                    <div class="row">
-                        <div class="input-field col s12">    
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="mdi-action-lock-outline prefix"></i>
+                                <input id='password' class='validate' type='password' name='password' id='password' />
+                                <label for='password'><?php echo $lang['loginPasswordInput'];?></label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">    
                             <a href="<?php echo site_url('Main/Navigation?lang=' . $_SESSION['lang'])?>" class="modal-action modal-close btn grey darken-1 right">
                                 <?php echo $lang['back'];?>
                             </a>
                             <button type="submit" value="save" class="btn btn-primary right mr10"><?php echo $lang['confirm'];?></button>
+                        </div>
                     </div>
-                </div>
-            </div>                           
-        </div>                     
+                </div>                           
+            </div>    
+        </div>
+                         
     </form>
 </main>
 <body>

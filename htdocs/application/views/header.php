@@ -95,6 +95,23 @@
    <li>
     <a href="<?php echo site_url('Main/events?lang=' . $_SESSION['lang'])?>" class="collapsible-header waves-effect waves-light"><i class="material-icons">date_range</i><?php echo $lang['events'];?></a>
    </li>
+
+   <!-- Luíla -->
+   <li>
+      <a  href="<?php echo site_url('Main/susLibras?lang=' . $_SESSION['lang'])?>" class="collapsible-header waves-effect waves-light">
+         <i class="material-icons">check_circle</i><?php echo $lang['susLibras'];?>
+      </a>
+   </li> 
+   <!------------------>
+
+   <!-- Luíla -->
+   <li>
+      <a  href="<?php echo site_url('Main/susPortugues?lang=' . $_SESSION['lang'])?>" class="collapsible-header waves-effect waves-light">
+         <i class="material-icons">check_circle_outline</i><?php echo $lang['susPortugues'];?>
+      </a>
+   </li> 
+   <!------------------>
+
    <li>
       <a  href="<?php echo site_url('Main/logout?&lang=' . $_SESSION['lang'])?>" class="collapsible-header waves-effect waves-light">
          <i class="material-icons">power_settings_new</i><?php echo $lang['logout'];?>
@@ -103,6 +120,8 @@
    <li>
       <div class="divider"></div>
    </li>
+
+   
 
    <!-- MENU LATERAL - ESCONDE O "SOBRE"
    <li><a class="subheader"><?php echo $lang['about'];?></a></li>

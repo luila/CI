@@ -7,13 +7,16 @@
                         <h4 class="header2 center"><?php echo $lang['newEvent'];?></h4>
                            
                         <div class="row">
-                        <?php echo validation_errors('<div class="card-panel red lighten-5">','</div>'); ?>
-                        <div class="col s12 m5">
+                            <?php echo validation_errors('<div class="card-panel red lighten-5">','</div>'); ?>
+                            <div class="col s12 m5">
                                 <div>
                                     <iframe src=<?php echo $lang['video-informe-local-descricao'];?> frameborder="0" allowfullscreen></iframe> 
                                 </div>
                                 <br>   
-                                <blockquote>Informe o local e descrição do evento.</blockquote>             
+
+                                <!-- <blockquote>Informe o local e descrição do evento.</blockquote>    -->
+                                <!-- <blockquote>Coloque o local e justifique o a solicitação de intérprete.</blockquote>    --> 
+                                <blockquote>Coloque o local e descrição do evento.</blockquote>    
                             </div>
                 
                             <div class="input-field col s12">
@@ -31,7 +34,9 @@
                                         <iframe src=<?php echo $lang['video-informe-data-hora'];?> frameborder="0" allowfullscreen></iframe> 
                                     </div>
                                     <br>  
-                                    <blockquote>Informe as datas e horário do evento.</blockquote>                  
+
+                                    <!-- <blockquote>Informe as datas e horário do evento.</blockquote>     -->             
+                                    <blockquote>Coloque o dia e hora que precisa de intérprete.</blockquote>
                             </div>
                                                             
                             <div class="input-field col s6">
@@ -59,7 +64,9 @@
                                     <iframe src=<?php echo $lang['video-informe-interprete'];?> frameborder="0" allowfullscreen></iframe> 
                                 </div>
                                 <br>    
-                                <blockquote>Informe os intérpretes que participarão do evento.</blockquote>                              
+
+                                <!-- <blockquote>Informe os intérpretes que participarão do evento.</blockquote>        -->                      
+                                <blockquote>Coloque o nome dos intérpretes que participarão do evento.</blockquote> 
                             </div>
 
                             <div class="input-field col s12">
