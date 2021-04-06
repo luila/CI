@@ -16,8 +16,8 @@
             // Luíla
             //"questionnaire" => "Questionário",
             "questionnaire" => "Questionário Sociodemográfico",
-            "susLibras" => "SUS Libras",
-            "susPortugues" => "SUS Português",
+            "susLibras" => "SUS - Libras",
+            "susPortugues" => "SUS - Português",
 
 
             //"events" => "Eventos",
