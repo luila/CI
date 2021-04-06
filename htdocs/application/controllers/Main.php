@@ -14,6 +14,8 @@ class Main extends CI_Controller
 		   $this->load->helper('form');
 		   $this->load->library('form_validation');
 		   $this->load->model('Questionnaire_model');
+		   $this->load->model('SusPortugues_model');
+		   /* $this->load->model('susLibras_model'); */
 	 }
 	 
 	public function events()
@@ -83,16 +85,19 @@ class Main extends CI_Controller
 			'idade' => $this->input->post('q1'),
 		);
 
+		/*
+
 		var_dump($_POST);
 		echo "------------------------------\n";
 		var_dump($_SESSION);
+		*/
 
 		if ($this->susLibras_model->InsertSusLibras($data))
 		{
 			echo "<script language=javascript>alert( 'Respostas gravadas com sucesso!' );</script>";
 			//Application.ProcessMessages;
 			//sleep(5);		
-			//redirect('Main/navigation?lang=' .  $this->Language_model->getLanguage());			
+			redirect('Main/navigation?lang=' .  $this->Language_model->getLanguage());			
 		}
 		else
 		{			
@@ -105,29 +110,46 @@ class Main extends CI_Controller
 	{
 		$data = array(
 			//'id_user' => $this->User_model->getUserId(),
-			'id_user' => "1000",
-			'q1' => $this->input->post('q1'),
-			'q2' => $this->input->post('q2'),
-			'q3' => $this->input->post('q3'),
-			'q4' => $this->input->post('q4'),
-			'q5' => $this->input->post('q5'),
-			'q6' => $this->input->post('q7'),
-			'q8' => $this->input->post('q8'),
-			'q9' => $this->input->post('q9'),
-			'q10' => $this->input->post('q10'),
-
+			/*'id_user_susPortugues' => '1000',
+			'q1_susPortugues' => '1',
+			'q2_susPortugues' => '2',
+			'q3_susPortugues' => '3',
+			'q4_susPortugues' => '4',
+			'q5_susPortugues' => '5',
+			'q6_susPortugues' => '6',
+			'q7_susPortugues' => '7',
+			'q8_susPortugues' => '8',
+			'q9_susPortugues' => '9',
+			'q10_susPortugues' => '10',
+			*/
+			'id_user_susPortugues' => $this->User_model->getUserId(),
+			'q1_susPortugues' => $this->input->post('q1'),
+			'q2_susPortugues' => $this->input->post('q2'),
+			'q3_susPortugues' => $this->input->post('q3'),
+			'q4_susPortugues' => $this->input->post('q4'),
+			'q5_susPortugues' => $this->input->post('q5'),
+			'q6_susPortugues' => $this->input->post('q6'),
+			'q7_susPortugues' => $this->input->post('q7'),
+			'q8_susPortugues' => $this->input->post('q8'),
+			'q9_susPortugues' => $this->input->post('q9'),
+			'q10_susPortugues' => $this->input->post('q10'),
+			
 		);
 
+		/*
 		var_dump($_POST);
 		echo "------------------------------\n";
+		print_r($data);
+		echo "------------------------------\n";
 		var_dump($_SESSION);
+		*/
 
-		if ($this->susPortugues_model->InsertSusPortugues($data))
+		if ($this->SusPortugues_model->InsertSusPortugues($data))
 		{
 			echo "<script language=javascript>alert( 'Respostas gravadas com sucesso!' );</script>";
 			//Application.ProcessMessages;
 			//sleep(5);		
-			//redirect('Main/navigation?lang=' .  $this->Language_model->getLanguage());			
+			redirect('Main/navigation?lang=' .  $this->Language_model->getLanguage());			
 		}
 		else
 		{			
