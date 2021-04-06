@@ -3,13 +3,15 @@ class Event_model extends CI_Model
 {
         public function InsertEvent()
         {       
+                
                 $data = array(
-                                'creator_user_id' => $this->User_model->getUserId(),
-                                'description' => $this->input->post('description'),
-                                'place' => $this->input->post('place'),
-                                'status' => $this->Event_model->obtainPendingStatus(), // 0 Pending, 1 Confirmed, 2 Canceled
-                                'start_date' => $this->Event_model->obtainformattedDateTime($this->input->post('sdate'), $this->input->post('stime')),
-                                'end_date' =>  $this->Event_model->obtainformattedDateTime($this->input->post('edate'),$this->input->post('etime')),
+                        'creator_user_id' => $this->User_model->getUserId(),
+                        'description' => $this->input->post('description'),
+                        'place' => $this->input->post('place'),
+                        'status' => $this->Event_model->obtainPendingStatus(), // 0 Pending, 1 Confirmed, 2 Canceled
+                        'start_date' => $this->Event_model->obtainformattedDateTime($this->input->post('sdate'), $this->input->post('stime')),
+                        'end_date' =>  $this->Event_model->obtainformattedDateTime($this->input->post('edate'),$this->input->post('etime')),
+                               
                 );
                 
                 $this->db->insert('event', $data);          

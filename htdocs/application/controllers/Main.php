@@ -13,6 +13,7 @@ class Main extends CI_Controller
 		   $this->load->helper('url');
 		   $this->load->helper('form');
 		   $this->load->library('form_validation');
+		   $this->load->model('Questionnaire_model');
 	 }
 	 
 	public function events()
@@ -46,6 +47,7 @@ class Main extends CI_Controller
 		$this->load->view('register');
 		$this->load->view('footer');
 	} 
+
     // quando a submissão é true chama essa função
 	public function submitNewInterpreter()
 	{	
@@ -74,32 +76,165 @@ class Main extends CI_Controller
 		}		
 	}
 
-	public function submitEvent()
+	public function submitSusLibras()
 	{
-		if ($this->form_validation->run() == FALSE)
+		$data = array(
+			'id_user' => $this->User_model->getUserId(),
+			'idade' => $this->input->post('q1'),
+		);
+
+		var_dump($_POST);
+		echo "------------------------------\n";
+		var_dump($_SESSION);
+
+		if ($this->susLibras_model->InsertSusLibras($data))
 		{
-			$this->event();
+			echo "<script language=javascript>alert( 'Respostas gravadas com sucesso!' );</script>";
+			//Application.ProcessMessages;
+			//sleep(5);		
+			//redirect('Main/navigation?lang=' .  $this->Language_model->getLanguage());			
 		}
 		else
-		{
-			$this->Event_model->InsertEvent();
-			redirect('Main/navigation?lang=' .  $this->Language_model->getLanguage());
+		{			
+			//echo 'erro ao inserir dados';
+			echo "<script language=javascript>alert( 'Falha ao gravar respostas.' );</script>";			
 		}
 	}
 
-	// inserido por Luíla
-	/*public function submitAge()
+	public function submitSusPortugues()
 	{
+		$data = array(
+			//'id_user' => $this->User_model->getUserId(),
+			'id_user' => "1000",
+			'q1' => $this->input->post('q1'),
+			'q2' => $this->input->post('q2'),
+			'q3' => $this->input->post('q3'),
+			'q4' => $this->input->post('q4'),
+			'q5' => $this->input->post('q5'),
+			'q6' => $this->input->post('q7'),
+			'q8' => $this->input->post('q8'),
+			'q9' => $this->input->post('q9'),
+			'q10' => $this->input->post('q10'),
+
+		);
+
+		var_dump($_POST);
+		echo "------------------------------\n";
+		var_dump($_SESSION);
+
+		if ($this->susPortugues_model->InsertSusPortugues($data))
+		{
+			echo "<script language=javascript>alert( 'Respostas gravadas com sucesso!' );</script>";
+			//Application.ProcessMessages;
+			//sleep(5);		
+			//redirect('Main/navigation?lang=' .  $this->Language_model->getLanguage());			
+		}
+		else
+		{			
+			//echo 'erro ao inserir dados';
+			echo "<script language=javascript>alert( 'Falha ao gravar respostas.' );</script>";			
+		}
+	}
+
+	// Luíla
+	public function submitSociodemographic()
+	{
+		/*
+		$data = array(
+			//'id' =>  $this->input->post('1'),
+			//'idade' => $this->input->post('30'),
+			//'password' => $this->input->post('password'),
+			//'type' => $type,
+			//'fatherId' =>  $this->User_model->getUserId()
+
+			
+			'id_user'=> '4',
+			'idade'=> '33',
+			'cidade'=> 'Goiânia',
+			'estado'=> 'GO',  
+			'sexo'=> 'Feminino',
+			'trabalho'=> 'sim',
+			'salario'=> '1000',
+			'escolaridade'=> 'Pós-graduação',
+			'surdez'=> 'Não',
+			'fluencia_libras'=> 'Não',
+			'idade_libras'=> '30',
+			'pais_libras'=> 'Não', 
+			'pais_surdos'=> 'Não',    
+			
+		); */
+
+			
+            //var_dump($_POST);
+			//echo "------------------------------\n";
+			//var_dump($_SESSION);
+
+
+			
+        
+
+		$data = array(
+
+			'id_user' =>  $this->User_model->getUserId(),		
+			'idade' => $this->input->post('idade'),	
+			//'idade'=> '33',
+			'cidade'=> $this->input->post('cidade'),
+			'estado'=>  $this->input->post('estado'),
+			'sexo'=> $this->input->post('sexo'),
+			//'trabalho'=> $this->input->post('trabalho'),
+			//'salario'=> $this->input->post('salario'),
+			'escolaridade'=> $this->input->post('escolaridade'),
+			'surdez'=> $this->input->post('surdez'),
+			'fluencia_libras'=> $this->input->post('fluencia_libras'),
+			'idade_libras'=> $this->input->post('idade_libras'),
+			'pais_libras'=> $this->input->post('pais_libras'), 
+			'pais_surdos'=> $this->input->post('pais_surdos'), 
+
+		); 
+
+		//$this->Questionnaire_model->InsertQuestionnaire($data);		
+		
+		
+		if ($this->Questionnaire_model->InsertQuestionnaire($data))
+		{
+			//echo 'Dados inseridos';		
+
+			echo "<script language=javascript>alert( 'Respostas gravadas com sucesso!' );</script>";
+			
+			//Application.ProcessMessages;
+			//sleep(5);		
+			redirect('Main/navigation?lang=' .  $this->Language_model->getLanguage());
+			
+		}
+		else
+		{			
+			//echo 'erro ao inserir dados';
+			echo "<script language=javascript>alert( 'Falha ao gravar respostas.' );</script>";			
+		}
+
+
+	}
+
+
+	public function submitEvent()
+	{
+		
+		/*
+		código bugado: validation->run está avaliando para false
 		if ($this->form_validation->run() == FALSE)
 		{
+			
 			$this->event();
 		}
 		else
 		{
+			
 			$this->Event_model->InsertEvent();
 			redirect('Main/navigation?lang=' .  $this->Language_model->getLanguage());
-		}
-	}*/
+		}*/
+		$this->Event_model->InsertEvent();
+			redirect('Main/navigation?lang=' .  $this->Language_model->getLanguage());
+	}
 
 	public function interpreter_validation($interpreterArray)
 	{
@@ -153,6 +288,27 @@ class Main extends CI_Controller
 		$this->load->view('footer');
 	}
 
+	//Luíla
+	public function eventlist()
+	{
+		$pendingEventsArray = $this->Event_model->GetPendingEvents();
+		$data['solicitation'] = $pendingEventsArray;
+	
+		$a=array();
+
+		foreach ($pendingEventsArray as $row) 
+		{
+			array_push($a, array("title" => $row->description, "start" => $row->start_date, "end" => $row->end_date));			
+		}			
+		
+		$data['pendingEventArray'] = json_encode($a);
+
+		$data['solicitation'] = $this->User_model->getInterpreters();
+		$this->load->view('header');
+		$this->load->view('eventlist', $data);
+		$this->load->view('footer');
+	}
+
 	// Luíla
 	public function questionnaire()
 	{
@@ -160,6 +316,23 @@ class Main extends CI_Controller
 		$this->load->view('sociodemographic');
 		$this->load->view('footer');
 	}
+
+	// Luíla
+	public function susLibras()
+	{
+		$this->load->view('header');
+		$this->load->view('susLibras');
+		$this->load->view('footer');
+	}
+
+	// Luíla
+	public function susPortugues()
+	{
+		$this->load->view('header');
+		$this->load->view('susPortugues');
+		$this->load->view('footer');
+	}
+
 
 	/*
 	public function newPopup()
