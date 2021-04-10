@@ -15,7 +15,7 @@ class Main extends CI_Controller
 		   $this->load->library('form_validation');
 		   $this->load->model('Questionnaire_model');
 		   $this->load->model('SusPortugues_model');
-		   /* $this->load->model('susLibras_model'); */
+		   $this->load->model('SusLibras_model');
 	 }
 	 
 	public function events()
@@ -81,18 +81,42 @@ class Main extends CI_Controller
 	public function submitSusLibras()
 	{
 		$data = array(
-			'id_user' => $this->User_model->getUserId(),
-			'idade' => $this->input->post('q1'),
+			//'id_user' => $this->User_model->getUserId(),
+			/*'id_user_susPortugues' => '1000',
+			'q1_susPortugues' => '1',
+			'q2_susPortugues' => '2',
+			'q3_susPortugues' => '3',
+			'q4_susPortugues' => '4',
+			'q5_susPortugues' => '5',
+			'q6_susPortugues' => '6',
+			'q7_susPortugues' => '7',
+			'q8_susPortugues' => '8',
+			'q9_susPortugues' => '9',
+			'q10_susPortugues' => '10',
+			*/
+			'id_user_susLibras' => $this->User_model->getUserId(),
+			'q1_susLibras' => $this->input->post('q1'),
+			'q2_susLibras' => $this->input->post('q2'),
+			'q3_susLibras' => $this->input->post('q3'),
+			'q4_susLibras' => $this->input->post('q4'),
+			'q5_susLibras' => $this->input->post('q5'),
+			'q6_susLibras' => $this->input->post('q6'),
+			'q7_susLibras' => $this->input->post('q7'),
+			'q8_susLibras' => $this->input->post('q8'),
+			'q9_susLibras' => $this->input->post('q9'),
+			'q10_susLibras' => $this->input->post('q10'),
+			
 		);
 
-		/*
-
+		
 		var_dump($_POST);
 		echo "------------------------------\n";
+		print_r($data);
+		echo "------------------------------\n";
 		var_dump($_SESSION);
-		*/
+		
 
-		if ($this->susLibras_model->InsertSusLibras($data))
+		if ($this->SusLibras_model->InsertSusLibras($data))
 		{
 			echo "<script language=javascript>alert( 'Respostas gravadas com sucesso!' );</script>";
 			//Application.ProcessMessages;
