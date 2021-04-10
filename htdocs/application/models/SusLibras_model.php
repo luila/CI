@@ -1,5 +1,5 @@
 <?php
-class susLibras_model extends CI_Model 
+class SusLibras_model extends CI_Model 
 {
      
     public function InsertSusLibras($data)
