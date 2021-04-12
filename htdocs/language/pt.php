@@ -76,16 +76,17 @@
             "registerParentsDeafness" => "Seus pais ou responsáveis são surdos? Clique abaixo e responda.",
             "registerQuestionnaire" => "Clique no botão abaixo para salvar todas as suas respostas.",
 
-            "susLibras1" => "Eu acho que gostaria de usar esse produto com frequência.",
-            "susLibras2" => "Eu acho o produto desnecessariamente complexo.",
-            "susLibras3" => "Eu achei o produto fácil de usar.",
-            "susLibras4" => "Eu acho que precisaria de ajuda de uma pessoa com conhecimentos técnicos para usar o produto.",
-            "susLibras5" => "Eu acho que as várias funções do produto estão muito bem integradas.",
-            "susLibras6" => "Eu acho que o produto apresenta muita inconsistência.",
-            "susLibras7" => "Eu acho que as pessoas aprenderão como usar esse produto rapidamente.",
-            "susLibras8" => "Eu achei o produto atrapalhado de usar.",
-            "susLibras9" => "Eu me senti confiante ao usar o produto.",
-            "susLibras10" => "Eu precisei aprender várias coisas novas antes de conseguir aprender a usar o produto.",
+            "susLibras1" => "1. Eu acho que gostaria de usar esse produto com frequência.",
+            "susLibras2" => "2. Eu acho o produto desnecessariamente complexo.",
+            "susLibras3" => "3. Eu achei o produto fácil de usar.",
+            "susLibras4" => "4. Eu acho que precisaria de ajuda de uma pessoa com conhecimentos técnicos para usar o produto.",
+            "susLibras5" => "5. Eu acho que as várias funções do produto estão muito bem integradas.",
+            "susLibras6" => "6. Eu acho que o produto apresenta muita inconsistência.",
+            "susLibras7" => "7. Eu acho que as pessoas aprenderão como usar esse produto rapidamente.",
+            "susLibras8" => "8. Eu achei o produto atrapalhado de usar.",
+            "susLibras9" => "9. Eu me senti confiante ao usar o produto.",
+            "susLibras10" => "10. Eu precisei aprender várias coisas novas antes de conseguir aprender a usar o produto.",
+            "susAdj11" => "11. No geral, eu classificaria a facilidade de uso deste produto como:",
 
             "susGlosa1" => "Glosa: MATERIAIS VÁRIOS (PRODUTO) NOVAMENTE }3X USAR EU QUERER.",
             "susGlosa2" => "Glosa: MATERIAIS VÁRIOS (PRODUTO) ELE DIFÍIL, PRECISAR-NÃO, PODIA FÁCIL.",
@@ -97,6 +98,7 @@
             "susGlosa8" => "Glosa: MATERIAIS VÁRIOS (PRODUTO) ELE DIFÍCIL.",
             "susGlosa9" => "Glosa: MATERIAIS VÁRIOS (PRODUTO) BEM CONFIAR!",
             "susGlosa10" => "Glosa: MATERIAIS VÁRIOS (PRODUTO) / DIFÍICIL TENTAR, ITENS APRENDER }2X, CONSEGUIR.",
+            "susAdjGlosa11" => "Glosa: PRODUTO VÁRIOS LISTAR ITENS ELE, FÁCIL USAR? COMO? POSITIVO NEGATIVO",
 
 
             //"saveAge" => "Salvar",
@@ -160,12 +162,32 @@
             "video-sus_pergunta8" => "/assets/video/sus_p8.mp4",
             "video-sus_pergunta9" => "/assets/video/sus_p9.mp4",
             "video-sus_pergunta10" => "/assets/video/sus_p10.mp4",
+            "video-sus_pergunta11" => "/assets/video/susAdj_p11.mp4",
+
+            
 
             "video-sus_escala1" => "/assets/video/susEscala1.mp4",
             "video-sus_escala2" => "/assets/video/susEscala2.mp4",
             "video-sus_escala3" => "/assets/video/susEscala3.mp4",
             "video-sus_escala4" => "/assets/video/susEscala4.mp4",
             "video-sus_escala5" => "/assets/video/susEscala5.mp4",
+
+            "video-susadj_escala1" => "/assets/video/susAdjEscala1.mp4",
+            "video-susadj_escala2" => "/assets/video/susAdjEscala2.mp4",
+            "video-susadj_escala3" => "/assets/video/susAdjEscala3.mp4",
+            "video-susadj_escala4" => "/assets/video/susAdjEscala4.mp4",
+            "video-susadj_escala5" => "/assets/video/susAdjEscala5.mp4",
+            "video-susadj_escala6" => "/assets/video/susAdjEscala6.mp4",
+            "video-susadj_escala7" => "/assets/video/susAdjEscala7.mp4",
+
+
+
+
+
+
+
+
+
 
 
 
