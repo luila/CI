@@ -105,15 +105,17 @@ class Main extends CI_Controller
 			'q8_susLibras' => $this->input->post('q8'),
 			'q9_susLibras' => $this->input->post('q9'),
 			'q10_susLibras' => $this->input->post('q10'),
+			'q11_susAdjLibras' => $this->input->post('q11'),
 			
 		);
 
-		
+		/*
 		var_dump($_POST);
 		echo "------------------------------\n";
 		print_r($data);
 		echo "------------------------------\n";
 		var_dump($_SESSION);
+		*/
 		
 
 		if ($this->SusLibras_model->InsertSusLibras($data))
@@ -157,6 +159,7 @@ class Main extends CI_Controller
 			'q8_susPortugues' => $this->input->post('q8'),
 			'q9_susPortugues' => $this->input->post('q9'),
 			'q10_susPortugues' => $this->input->post('q10'),
+			'q11_susAdjPortugues' => $this->input->post('q11'),
 			
 		);
 
