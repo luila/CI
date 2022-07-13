@@ -8,6 +8,7 @@ class Login extends CI_Controller{
 	  $this->load->database();
 	  $this->load->model('User_model');
 	  $this->load->model('Language_model');
+	  $this->load->library('user_agent'); //verifica o dispositivo
 	}
 
 	public function index(){
@@ -25,8 +26,16 @@ class Login extends CI_Controller{
 			if($result){	// entra nesse if se a senha e email estão corretos	 
 				$this->load->helper('url'); 
 				$this->User_model->setUserSession($postData['email'], $postData['password']);
-				// redireciona para a pagina principal
+				$this->User_model->submitLoginTime();	
+				
+
+				//'time_submit_login' => $this->User_model->getUserTime(),
+				/* redireciona para a pagina principal
 				redirect('Main/events?lang=' .  $this->Language_model->getLanguage());
+				*/
+
+				//Redireciona para a tela de boas vindas
+				redirect('Main/boasVindas?lang=' .  $this->Language_model->getLanguage());
 			}
 			else{ // exibe erro
 				echo"
